@@ -12,9 +12,11 @@ const app = express()
 app.use(express.json())
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin: ["http://localhost:3000", "*"],   
-}));
+app.use(
+    cors({
+      origin: "*",
+    })
+);
 
 async function main(){
     try {
