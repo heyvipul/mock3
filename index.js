@@ -7,6 +7,7 @@ const User = require("./models/user");
 const jwt = require("jsonwebtoken")
 const SECRET_KEY = "nmklhvlcxhkbxjzb@1651fd"
 const bodyParser = require('body-parser');
+require('dotenv').config()
 
 const app = express()
 app.use(express.json())
@@ -20,7 +21,7 @@ app.use(
 
 async function main(){
     try {
-       await mongoose.connect("mongodb+srv://vipulgirhe:vipulgirhe@cluster0.ax4dqic.mongodb.net/evalmock3")
+       await mongoose.connect(process.env.MONGO_URL)
        console.log("mongodb connection successfully!");
     } catch (error) {
         console.log("connection failed");
