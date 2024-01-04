@@ -20,7 +20,7 @@ app.use(
 
 async function main(){
     try {
-       await mongoose.connect("Mongoose_URL")
+       await mongoose.connect("mongodb+srv://vipulgirhe:vipulgirhe@cluster0.ax4dqic.mongodb.net/evalmock3")
        console.log("mongodb connection successfully!");
     } catch (error) {
         console.log("connection failed");
